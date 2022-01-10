@@ -68,11 +68,12 @@ namespace _lab4
                                 sorted_words.Sort();
                                 foreach (var word1 in sorted_words)
                                 {
-                                    foreach (var word2 in vocabulary)
-                                    {
-                                        if (word1 == word2.Key)
-                                            Console.WriteLine(word1 + "  -  " + word2.Value);
-                                    }
+                                    Console.WriteLine(word1 + "  -  " + vocabulary[word1]);
+                                    //foreach (var word2 in vocabulary)
+                                    //{
+                                    //    if (word1 == word2.Key)
+                                    //        Console.WriteLine(word1 + "  -  " + word2.Value);
+                                    //}
                                 }
                                 break;
                             case 2:
@@ -83,6 +84,7 @@ namespace _lab4
                                 sorted_words.Sort();
                                 foreach (var word1 in sorted_words)
                                 {
+                                    //Console.WriteLine(word1 + "  -  " + vocabulary[word1]);
                                     foreach (var word2 in vocabulary)
                                     {
                                         if (word1 == word2.Value)
@@ -103,7 +105,7 @@ namespace _lab4
                         switch (choice)
                         {
                             case 1:
-                                Console.WriteLine("\nEnter the word in English");
+                                Console.WriteLine("\nEnter the word in English:");
                                 string _word1 = Console.ReadLine();
                                 foreach (var word in vocabulary)
                                 {
@@ -115,7 +117,7 @@ namespace _lab4
                                 }
                                 break;
                             case 2:
-                                Console.WriteLine("Enter the word in Polish");
+                                Console.WriteLine("Enter the word in Polish:");
                                 string _word2 = Console.ReadLine();
                                 foreach (var word in vocabulary)
                                 {
@@ -139,9 +141,9 @@ namespace _lab4
                         switch (choice)
                         {
                             case 1:
-                                Console.WriteLine("\nEnter the word in English");
+                                Console.WriteLine("\nEnter the word in English:");
                                 string _word1 = Console.ReadLine();
-                                Console.WriteLine("Enter the word in Polish");
+                                Console.WriteLine("Enter the word in Polish:");
                                 string _word2 = Console.ReadLine();
                                 vocabulary.Add(_word1, _word2);
                                 break;
